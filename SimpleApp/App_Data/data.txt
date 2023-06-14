@@ -1,0 +1,6 @@
+﻿1, Mobile Phone, 600, Top Phone, 5
+2, Laptop, 3200, Super Laptop, 2
+3, Keyboard, 35, Perfect Keyboard, 8
+4, Mouse, 10, Cool Mouse, 13
+5, Pen, 1, Great Pen, 3
+6, Notebook, 1, Good Notebook, 5
