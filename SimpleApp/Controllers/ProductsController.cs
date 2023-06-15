@@ -17,14 +17,22 @@ namespace SimpleApp.Controllers
         {
             _reader = new ProductReader();
         }
-
-        // Products/List
-        public IActionResult List()
+        
+        // Products/List/category
+        public IActionResult List(string category)
         {
-            List<Product> products = _reader.ReadFromFile();
+            if (category == null)
+            {
+                List<Product> products = _reader.ReadFromFile();
+                return View(products);
+            }
+            else
+            {
+                List<Product> products = _reader.ReadFromFile().FindAll(c => c.Category == category);
+                return View(products);
+            }
             // Повернення уявлення List та передача уявленню моделі у вигляді колекції products
             // Отримати доступ до колекції у виставі можна буде через властивість представлення Model
-            return View(products);
         }
 
         // Products/Details/1

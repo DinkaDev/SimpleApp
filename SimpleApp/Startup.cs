@@ -33,7 +33,7 @@ namespace SimpleApp
             {
                 endpoints.MapControllerRoute(
                         name: "Default",
-                        pattern: "{controller}/{action}/{id?}"
+                        pattern: "{controller}/{action}/{category?}"
                     );
             });
 
